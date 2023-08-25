@@ -1,0 +1,119 @@
+/* CSS Variables */
+:root {
+  --body-background: #1e375a1a;
+}
+
+body,
+h1,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--body-background); /*applied CSS variable here*/
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(to bottom, #00abe4, #007fa9);
+  background-color: #00abe4;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Main Content */
+.main-content {
+  flex: 0.5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.skills,
+.animation {
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.animation {
+  text-align: center;
+}
+.skills {
+  background: linear-gradient(to top, #00abe4, #e40039);
+  color: #f8fdff;
+}
+.skill-list {
+  list-style: circle;
+  padding-left: 20px;
+}
+
+.animation h2 {
+  margin-bottom: 50px;
+}
+
+.skills h2 {
+  margin-bottom: 25px;
+}
+
+/* Animation */
+.animated-button {
+  background-color: #00abe4;
+  width: 50%;
+  font-size: medium;
+  font-weight: bolder;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.animated-button:hover {
+  animation: colorChange 1s infinite alternate;
+}
+
+/* Keyframe Animation */
+@keyframes colorChange {
+  0% {
+    background-color: #2ecc71;
+  }
+  100% {
+    background-color: #e40039;
+  }
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #364f6b;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+}
